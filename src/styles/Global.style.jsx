@@ -24,3 +24,16 @@ export const TitleBox = styled.div`
 export const ContentBox = styled.div`
   font-size: 15px;
 `
+
+export const BigButton = styled.button`
+  width: 100px;
+  height: 40px;
+  display: flex;
+  background-color: ${(props)=>props.bgColor};
+  justify-content: center;
+  align-items: center;
+  border: 2px solid ${(props)=>props.borderColor};
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+`
