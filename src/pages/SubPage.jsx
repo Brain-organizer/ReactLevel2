@@ -1,4 +1,4 @@
-import { TodoLayout } from '../styles/stylecomponents';
+import { TodoLayout } from '../styles/Global.style';
 import DetailTodoCard from '../components/DetailTodoCard';
 
 function SubPage() {

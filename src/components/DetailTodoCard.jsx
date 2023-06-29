@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { Button, ContentBox, DetailContainer, HeaderContainer, TitleBox } from "../styles/stylecomponents"
+import { ReturnHomeButton, DetailContainer } from "../styles/SubPage.style"
 import { useSelector } from "react-redux";
+import { ContentBox, TitleBox, HeaderContainer } from "../styles/Global.style";
 
 function DetailTodoCard() {
     const id = useParams().id;
@@ -10,9 +11,9 @@ function DetailTodoCard() {
     
   return (
     <DetailContainer>
-        <HeaderContainer>
+        <HeaderContainer borderStyle="none">
           <div>id: {id}</div>
-          <Button onClick={()=>navigate('/')}>이전으로</Button>
+          <ReturnHomeButton onClick={()=>navigate('/')}>이전으로</ReturnHomeButton>
         </HeaderContainer>
         <div>
           <TitleBox>

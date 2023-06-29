@@ -6,31 +6,13 @@ export const TodoLayout = styled.div`
   min-width: 800px;
 `
 
-export const DetailContainer = styled.div`
-  width: 400px;
-  height: 300px;
-  border: 3px solid green;
-  border-radius: 10px;
-  margin: auto;
-  margin-top: 20%;
-  padding: 15px;
-  gap: 10px;
-`
 export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`
-
-export const Button = styled.button`
-  width: 100px;
-  height: 40px;
-  display: flex;
-  background-color: transparent;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid rgb(127,255,0);
+  border: 1px ${(props) => props.borderStyle} gray;
   border-radius: 5px;
+  padding: 10px;
 `
 
 export const TitleBox = styled.div`
@@ -42,4 +24,3 @@ export const TitleBox = styled.div`
 export const ContentBox = styled.div`
   font-size: 15px;
 `
-

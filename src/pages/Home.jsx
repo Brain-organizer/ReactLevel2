@@ -1,8 +1,14 @@
 import React from 'react'
+import MainHeader from '../components/MainHeader'
+import { TodoLayout } from '../styles/Global.style'
 
 function Home() {
   return (
-    <div>Home</div>
+    <TodoLayout>
+      <MainHeader/>
+      
+    </TodoLayout>
+    
   )
 }
 
