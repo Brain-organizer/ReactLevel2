@@ -24,13 +24,15 @@ function TodoAdder() {
   return (
     <AddTodoContainer>
       <InputTextContainer>
-        <InputNameBox>제목</InputNameBox>
+        <InputNameBox htmlFor="title">제목</InputNameBox>
         <InputBox
+          id="title"
           value={title}
           onChange={titleOnChangeHandler}
         />
-        <InputNameBox>내용</InputNameBox>
+        <InputNameBox htmlFor="content">내용</InputNameBox>
         <InputBox
+          id="content"
           value={content}
           onChange={contentOnChangeHandler}
         />

@@ -16,7 +16,7 @@ export const InputTextContainer = styled.div`
   gap: 10px;
 `
 
-export const InputNameBox = styled.div`
+export const InputNameBox = styled.label`
   text-align: center;
   font-size: 15px;
   font-weight: bold;
