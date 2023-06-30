@@ -11,12 +11,12 @@ function DetailTodoCard() {
     
   return (
     <DetailContainer>
-        <HeaderContainer borderStyle="none">
+        <HeaderContainer $borderstyle="none">
           <div>id: {id}</div>
-          <BigButton onClick={()=>navigate('/')} bgColor='transparent' borderColor='green'>이전으로</BigButton>
+          <BigButton onClick={()=>navigate('/')} $bgcolor='transparent' $bordercolor='green'>이전으로</BigButton>
         </HeaderContainer>
         <div>
-          <TitleBox>
+          <TitleBox $marginstyle="20px">
             {targetTodo.title}
           </TitleBox>
           <ContentBox>

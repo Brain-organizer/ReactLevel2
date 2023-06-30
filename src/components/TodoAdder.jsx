@@ -1,16 +1,43 @@
+import { useDispatch } from "react-redux"
 import { BigButton } from "../styles/Global.style"
 import { AddTodoContainer, InputBox, InputNameBox, InputTextContainer } from "../styles/Home.style"
+import { useState } from "react";
+import { addToDo } from "../redux/modules/todos";
 
 function TodoAdder() {
+  const dispatch = useDispatch();
+  const [title, setTitle] = useState('');
+  const [content, setContent] = useState('');
+
+  const titleOnChangeHandler = (event) => {
+    setTitle(event.target.value);
+  };
+  const contentOnChangeHandler = (event) => {
+    setContent(event.target.value);
+  }
+  const addButtonOnClickHandler = () => {
+    dispatch(addToDo(title, content));
+    setTitle('');
+    setContent('');
+  }
+
   return (
     <AddTodoContainer>
       <InputTextContainer>
         <InputNameBox>제목</InputNameBox>
-        <InputBox/>
+        <InputBox
+          value={title}
+          onChange={titleOnChangeHandler}
+        />
         <InputNameBox>내용</InputNameBox>
-        <InputBox/>
+        <InputBox
+          value={content}
+          onChange={contentOnChangeHandler}
+        />
       </InputTextContainer>
-      <BigButton bgColor='white' borderColor='darkgreen'>추가하기</BigButton>
+      <BigButton 
+      onClick={addButtonOnClickHandler}
+      $bgcolor='white' $bordercolor='darkgreen'>추가하기</BigButton>
     </AddTodoContainer>
   )
 }
