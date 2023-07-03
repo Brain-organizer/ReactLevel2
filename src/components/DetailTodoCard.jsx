@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { ReturnHomeButton, DetailContainer } from "../styles/SubPage.style"
+import { DetailContainer } from "../styles/SubPage.style"
 import { useSelector } from "react-redux";
-import { ContentBox, TitleBox, HeaderContainer } from "../styles/Global.style";
+import { ContentBox, TitleBox, HeaderContainer, BigButton } from "../styles/Global.style";
 
 function DetailTodoCard() {
     const id = useParams().id;
@@ -11,19 +11,19 @@ function DetailTodoCard() {
     
   return (
     <DetailContainer>
-        <HeaderContainer borderStyle="none">
+        <HeaderContainer $borderstyle="none">
           <div>id: {id}</div>
-          <ReturnHomeButton onClick={()=>navigate('/')}>이전으로</ReturnHomeButton>
+          <BigButton onClick={()=>navigate('/')} $bgcolor='transparent' $bordercolor='green'>이전으로</BigButton>
         </HeaderContainer>
         <div>
-          <TitleBox>
+          <TitleBox $marginstyle="20px">
             {targetTodo.title}
           </TitleBox>
           <ContentBox>
             {targetTodo.content}
           </ContentBox>
         </div>
-      </DetailContainer>
+    </DetailContainer >
   )
 }
 

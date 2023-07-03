@@ -2,7 +2,7 @@ import { HeaderContainer } from "../styles/Global.style"
 
 function MainHeader() {
   return (
-    <HeaderContainer borderStyle='solid'>
+    <HeaderContainer $borderstyle='solid'>
       <div>My Todo List</div>
       <div>React</div>
     </HeaderContainer>
